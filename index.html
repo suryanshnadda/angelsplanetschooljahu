@@ -1,0 +1,1184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Angels Planet Public School | Home</title>
+  <meta name="description" content="Angels Planet Public School – A caring and quality learning environment from Pre-Nursery to Grade 5." />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+
+  <style>
+    :root{
+      --primary: #1d4ed8;
+      --dark: #0f172a;
+      --soft: #f6f8ff;
+      --muted: #64748b;
+      --card: rgba(255,255,255,.92);
+      --border: rgba(2, 6, 23, .08);
+    }
+
+    *{ box-sizing: border-box; }
+    html{ scroll-behavior: smooth; }
+
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: #0b1220;
+      background: #fff;
+    }
+
+    /* Topbar */
+    .topbar{
+      background: #0b1220;
+      color: rgba(255,255,255,.85);
+    }
+
+    /* Navbar (Glass effect) */
+    .navbar-blur{
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand-mark{
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), #60a5fa);
+      color: #fff;
+      font-weight: 800;
+      flex: 0 0 auto;
+    }
+
+    .nav-link{
+      font-weight: 600;
+      color: #0b1220;
+      opacity: .8;
+    }
+    .nav-link:hover{ opacity: 1; }
+    .nav-link.active{ color: var(--primary) !important; opacity: 1; }
+
+    /* Hero */
+    .hero-section{
+      position: relative;
+      padding: 70px 0;
+      background: radial-gradient(1200px 500px at 10% 10%, rgba(29,78,216,.20), transparent 55%),
+                  radial-gradient(900px 450px at 90% 30%, rgba(96,165,250,.22), transparent 50%),
+                  linear-gradient(180deg, #0b1220 0%, #0b1220 45%, #ffffff 45%, #ffffff 100%);
+    }
+
+    .hero-badge{
+      background: rgba(255,255,255,.12);
+      color: rgba(255,255,255,.95);
+      border: 1px solid rgba(255,255,255,.18);
+      padding: 10px 14px;
+      border-radius: 999px;
+    }
+
+    .hero-title{
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-subtitle{
+      color: rgba(255,255,255,.85);
+      max-width: 52ch;
+    }
+
+    .hero-stats{
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .stat{
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      padding: 10px 12px;
+      border-radius: 14px;
+      min-width: 120px;
+    }
+    .stat-num{
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .stat-label{
+      color: rgba(255,255,255,.75);
+      font-size: 13px;
+    }
+
+    .hero-card{
+      border-radius: 20px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      padding: 10px;
+    }
+
+    .hero-card-inner{
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,.18);
+    }
+
+    .hero-card-top{
+      padding: 16px;
+      background: linear-gradient(135deg, #e0f2fe, #eef2ff);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-card-body{
+      padding: 16px;
+    }
+
+    .hero-card-footer{
+      padding: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Sections */
+    .bg-soft{ background: var(--soft); }
+
+    .section-kicker{
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+
+    .section-title{
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    /* Feature Card */
+    .feature-card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      height: 100%;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, .06);
+    }
+
+    .feature-icon{
+      font-size: 30px;
+      color: var(--primary);
+    }
+
+    /* About Image Placeholder */
+    .image-placeholder{
+      height: 320px;
+      border-radius: 20px;
+      border: 1px dashed rgba(2, 6, 23, .25);
+      background: linear-gradient(135deg, rgba(29,78,216,.08), rgba(96,165,250,.08));
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .placeholder-text{
+      font-weight: 800;
+      color: #0b1220;
+    }
+    .placeholder-text .small{
+      display: block;
+      font-weight: 600;
+      opacity: .7;
+    }
+
+    /* Mini Cards */
+    .mini-card{
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+      height: 100%;
+    }
+    .mini-card-title{
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .mini-card-title i{ color: var(--primary); }
+    .mini-card-text{
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Programs */
+    .program-card{
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      height: 100%;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .program-card:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, .08);
+    }
+    .program-header{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .program-header i{
+      font-size: 22px;
+      color: var(--primary);
+    }
+    .program-card.highlight{
+      background: linear-gradient(135deg, rgba(29,78,216,.08), rgba(96,165,250,.10));
+    }
+
+    /* Steps */
+    .steps{
+      display: grid;
+      gap: 14px;
+    }
+    .step{
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .step-circle{
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      flex: 0 0 auto;
+    }
+
+    /* Forms */
+    .admission-card,
+    .contact-form-card{
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 14px 40px rgba(15, 23, 42, .06);
+    }
+
+    .form-control, .form-select{
+      border-radius: 14px;
+      border: 1px solid rgba(2,6,23,.14);
+      padding: 12px 12px;
+    }
+
+    /* Gallery */
+    .gallery-item{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      background: #fff;
+      transition: transform .18s ease;
+    }
+    .gallery-item:hover{ transform: translateY(-3px); }
+
+    .gallery-placeholder{
+      height: 170px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      color: rgba(2,6,23,.5);
+      background: linear-gradient(135deg, rgba(29,78,216,.10), rgba(96,165,250,.10));
+    }
+
+    /* Testimonials */
+    .testimonial-card{
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 18px;
+      height: 100%;
+    }
+
+    .avatar{
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: rgba(29,78,216,.12);
+      color: var(--primary);
+      font-weight: 900;
+    }
+
+    /* Contact */
+    .contact-box{
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .contact-line{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+    }
+    .contact-line i{
+      width: 42px;
+      height: 42px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: rgba(29,78,216,.10);
+      color: var(--primary);
+      font-size: 18px;
+    }
+
+    .map-box{
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #fff;
+    }
+
+    .map-placeholder{
+      height: 220px;
+      display: grid;
+      place-items: center;
+      color: rgba(2,6,23,.5);
+      font-weight: 800;
+      background: linear-gradient(135deg, rgba(29,78,216,.07), rgba(96,165,250,.07));
+    }
+
+    /* Footer */
+    .footer{
+      background: #0b1220;
+      color: rgba(255,255,255,.9);
+    }
+    .footer-link{
+      color: rgba(255,255,255,.8);
+      text-decoration: none;
+      margin-left: 12px;
+    }
+    .footer-link:hover{ color: #fff; }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float{
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: #25D366;
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+      box-shadow: 0 18px 40px rgba(0,0,0,.2);
+      z-index: 999;
+    }
+
+    /* Back to top */
+    .back-to-top{
+      position: fixed;
+      left: 18px;
+      bottom: 18px;
+      width: 48px;
+      height: 48px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.92);
+      display: grid;
+      place-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s ease, transform .2s ease;
+      z-index: 999;
+      transform: translateY(6px);
+    }
+    .back-to-top.show{
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    /* Modal glass */
+    .modal-glass{
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+    }
+    .modal-image-placeholder{
+      height: 240px;
+      border-radius: 18px;
+      border: 1px dashed rgba(2,6,23,.25);
+      display: grid;
+      place-items: center;
+      color: rgba(2,6,23,.55);
+      font-weight: 800;
+    }
+
+    /* Reveal animation */
+    .reveal{
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.show{
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Mobile tuning */
+    @media (max-width: 576px){
+      .hero-section{ padding: 52px 0; }
+      .gallery-placeholder{ height: 140px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar py-2 d-none d-lg-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="small">
+        <i class="bi bi-geo-alt"></i> Jahu, Himachal Pradesh, India
+        <span class="mx-3">|</span>
+        <i class="bi bi-envelope"></i> angelsplanetps@gmail.com
+      </div>
+      <div class="small">
+        <i class="bi bi-telephone"></i> +91 9418032730
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-blur">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#home">
+        <span class="brand-mark"><img src="images/logo.jpeg" class="img-fluid" alt="My Image"></span>
+        <span>Angels Planet Public School</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#admissions">Admissions</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="ms-lg-3 d-grid d-lg-flex gap-2">
+          <a class="btn btn-outline-primary btn-sm" href="#contact">
+            <i class="bi bi-calendar-check"></i> Book a Visit
+          </a>
+          <a class="btn btn-primary btn-sm" href="#admissions">
+            <i class="bi bi-pencil-square"></i> Apply Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <p class="badge hero-badge mb-3">
+            Pre-Nursery to Grade 8 • Safe • Caring • Modern Learning
+          </p>
+
+          <h1 class="display-5 fw-bold hero-title">
+            Where Learning Begins with Joy and Values
+          </h1>
+
+          <p class="lead hero-subtitle mt-3">
+            Angels Planet Public School offers a nurturing environment with activity-based learning, strong fundamentals,
+            and holistic development for young learners.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <a href="#programs" class="btn btn-primary btn-lg">
+              Explore Programs <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary btn-lg">
+              Contact School
+            </a>
+          </div>
+
+          <div class="hero-stats mt-4">
+            <div class="stat">
+              <div class="stat-num">20+</div>
+              <div class="stat-label">Activities</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">100%</div>
+              <div class="stat-label">Care & Safety</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">5</div>
+              <div class="stat-label">Grades</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="hero-card">
+            <div class="hero-card-inner">
+              <div class="hero-card-top">
+                <h5 class="mb-1">Admissions Open</h5>
+                <p class="mb-0 small text-muted">Session 2026–27</p>
+              </div>
+
+              <div class="hero-card-body">
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex align-items-start gap-2 mb-3">
+                    <i class="bi bi-check2-circle text-success fs-5"></i>
+                    <div>
+                      <div class="fw-semibold">Activity-Based Learning</div>
+                      <div class="small text-muted">Play, creativity, and foundational skills.</div>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-start gap-2 mb-3">
+                    <i class="bi bi-check2-circle text-success fs-5"></i>
+                    <div>
+                      <div class="fw-semibold">Smart Class Support</div>
+                      <div class="small text-muted">Simple, effective, age-appropriate tech.</div>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-start gap-2">
+                    <i class="bi bi-check2-circle text-success fs-5"></i>
+                    <div>
+                      <div class="fw-semibold">Safe Campus & Caring Staff</div>
+                      <div class="small text-muted">Your child’s wellbeing comes first.</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="hero-card-footer">
+                <a href="#admissions" class="btn btn-dark w-100">
+                  Apply for Admission <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Features -->
+  <section class="py-5 bg-soft">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="feature-card">
+            <i class="bi bi-shield-check feature-icon"></i>
+            <h5 class="mt-3">Safe Environment</h5>
+            <p class="text-muted mb-0">Hygiene-focused campus with child-friendly safety practices.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="feature-card">
+            <i class="bi bi-book feature-icon"></i>
+            <h5 class="mt-3">Strong Basics</h5>
+            <p class="text-muted mb-0">Reading, writing, maths and life-skills through fun methods.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="feature-card">
+            <i class="bi bi-palette feature-icon"></i>
+            <h5 class="mt-3">Creativity</h5>
+            <p class="text-muted mb-0">Art, music, storytelling, dance and creative expression.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="feature-card">
+            <i class="bi bi-people feature-icon"></i>
+            <h5 class="mt-3">Caring Teachers</h5>
+            <p class="text-muted mb-0">Supportive mentoring, personal attention and confidence building.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6 reveal">
+          <div class="image-placeholder">
+            <div class="placeholder-text">
+              Add School Image Here<br/>
+              <span class="small">Replace this block with a real image later.</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 reveal">
+          <p class="section-kicker">About Us</p>
+          <h2 class="section-title">Angels Planet Public School</h2>
+          <p class="text-muted mt-3">
+            We are committed to creating a positive learning experience where children grow academically, emotionally,
+            and socially. Our teaching approach focuses on concepts, curiosity, confidence, and character.
+          </p>
+
+          <div class="row g-3 mt-3">
+            <div class="col-sm-6">
+              <div class="mini-card">
+                <div class="mini-card-title"><i class="bi bi-bullseye"></i> Our Mission</div>
+                <div class="mini-card-text">Quality education with values and joyful learning.</div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="mini-card">
+                <div class="mini-card-title"><i class="bi bi-eye"></i> Our Vision</div>
+                <div class="mini-card-text">Build confident learners ready for future challenges.</div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary mt-4">
+            Talk to Us <i class="bi bi-chat-dots ms-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section id="programs" class="py-5 bg-soft">
+    <div class="container">
+      <div class="text-center mb-4">
+        <p class="section-kicker">Programs</p>
+        <h2 class="section-title">Classes Offered</h2>
+        <p class="text-muted mb-0">Child-focused learning from Pre-Nursery to Grade 8.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="program-card">
+            <div class="program-header">
+              <i class="bi bi-stars"></i>
+              <h5 class="mb-0">Pre-Nursery</h5>
+            </div>
+            <p class="text-muted mb-0">
+              Play-based learning, social skills, motor development, and early language support.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="program-card">
+            <div class="program-header">
+              <i class="bi bi-balloon"></i>
+              <h5 class="mb-0">Nursery</h5>
+            </div>
+            <p class="text-muted mb-0">
+              Phonics, colors, shapes, stories, rhymes, and foundational numeracy.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="program-card">
+            <div class="program-header">
+              <i class="bi bi-emoji-smile"></i>
+              <h5 class="mb-0">LKG / UKG</h5>
+            </div>
+            <p class="text-muted mb-0">
+              Strong basics in reading, writing, and maths with fun classroom activities.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="program-card">
+            <div class="program-header">
+              <i class="bi bi-book-half"></i>
+              <h5 class="mb-0">Grade 1–2</h5>
+            </div>
+            <p class="text-muted mb-0">
+              Concept clarity, handwriting, storytelling, and confident communication.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="program-card">
+            <div class="program-header">
+              <i class="bi bi-calculator"></i>
+              <h5 class="mb-0">Grade 3–8</h5>
+            </div>
+            <p class="text-muted mb-0">
+              Academic strengthening with projects, problem-solving, and life skills.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="program-card highlight">
+            <div class="program-header">
+              <i class="bi bi-award"></i>
+              <h5 class="mb-0">Co-Curricular</h5>
+            </div>
+            <p class="mb-0">
+              Art, dance, music, sports, storytelling, and activity-based workshops.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admissions -->
+  <section id="admissions" class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6 reveal">
+          <p class="section-kicker">Admissions</p>
+          <h2 class="section-title">Simple Admission Process</h2>
+          <p class="text-muted mt-3">
+            We make admissions easy for parents. Visit the school, meet our teachers, and choose the best program for your child.
+          </p>
+
+          <div class="steps mt-4">
+            <div class="step">
+              <div class="step-circle">1</div>
+              <div>
+                <div class="fw-semibold">Contact & Visit</div>
+                <div class="text-muted small">Book a visit and explore our campus.</div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-circle">2</div>
+              <div>
+                <div class="fw-semibold">Submit Documents</div>
+                <div class="text-muted small">Basic details, identity & child records.</div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-circle">3</div>
+              <div>
+                <div class="fw-semibold">Confirm Seat</div>
+                <div class="text-muted small">Complete admission and welcome your child.</div>
+              </div>
+            </div>
+          </div>
+
+          <a class="btn btn-primary mt-4" href="#contact">
+            Enquire Now <i class="bi bi-send ms-1"></i>
+          </a>
+        </div>
+
+        <div class="col-lg-6 reveal">
+          <div class="admission-card">
+            <h5 class="mb-3">Quick Enquiry</h5>
+            <form id="enquiryForm" novalidate>
+              <div class="mb-3">
+                <label class="form-label">Parent Name</label>
+                <input type="text" class="form-control" id="parentName" placeholder="Enter your name" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="+91 XXXXX XXXXX" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Class Interested</label>
+                <select class="form-select" id="classInterested" required>
+                  <option value="">Select</option>
+                  <option>Pre-Nursery</option>
+                  <option>Nursery</option>
+                  <option>LKG</option>
+                  <option>UKG</option>
+                  <option>Grade 1</option>
+                  <option>Grade 2</option>
+                  <option>Grade 3</option>
+                  <option>Grade 4</option>
+                  <option>Grade 5</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-dark w-100">
+                Submit Enquiry
+              </button>
+              <p id="formMsg" class="small mt-3 mb-0 text-muted"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-5 bg-soft">
+    <div class="container">
+      <div class="text-center mb-4">
+        <p class="section-kicker">Gallery</p>
+        <h2 class="section-title">School Moments</h2>
+        <p class="text-muted mb-0">Click any card to open preview (demo).</p>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-6 col-md-4 reveal">
+          <div class="gallery-item" data-title="Classroom Activities">
+            <div class="gallery-placeholder">Photo 1</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 reveal">
+          <div class="gallery-item" data-title="Sports & Games">
+            <div class="gallery-placeholder">Photo 2</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 reveal">
+          <div class="gallery-item" data-title="Annual Day">
+            <div class="gallery-placeholder">Photo 3</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 reveal">
+          <div class="gallery-item" data-title="Learning with Fun">
+            <div class="gallery-placeholder">Photo 4</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 reveal">
+          <div class="gallery-item" data-title="Creative Work">
+            <div class="gallery-placeholder">Photo 5</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 reveal">
+          <div class="gallery-item" data-title="Celebrations">
+            <div class="gallery-placeholder">Photo 6</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <p class="section-kicker">Testimonials</p>
+        <h2 class="section-title">What Parents Say</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="testimonial-card">
+            <p class="mb-3">
+              “Teachers are very supportive and the environment is safe. My child has improved a lot.”
+            </p>
+            <div class="d-flex align-items-center gap-2">
+              <div class="avatar">P</div>
+              <div>
+                <div class="fw-semibold">Parent</div>
+                <div class="small text-muted">Grade 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="testimonial-card">
+            <p class="mb-3">
+              “The school focuses on learning with activities. My kid enjoys going to school daily.”
+            </p>
+            <div class="d-flex align-items-center gap-2">
+              <div class="avatar">A</div>
+              <div>
+                <div class="fw-semibold">Parent</div>
+                <div class="small text-muted">Nursery</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="testimonial-card">
+            <p class="mb-3">
+              “Best foundation for early education. Strong basics + good discipline and values.”
+            </p>
+            <div class="d-flex align-items-center gap-2">
+              <div class="avatar">S</div>
+              <div>
+                <div class="fw-semibold">Parent</div>
+                <div class="small text-muted">Grade 4</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5 bg-soft">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5 reveal">
+          <p class="section-kicker">Contact</p>
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="text-muted mt-3">
+            Reach us for admissions, school visit, or any enquiry.
+          </p>
+
+          <div class="contact-box mt-4">
+            <div class="contact-line">
+              <i class="bi bi-telephone"></i>
+              <div>
+                <div class="fw-semibold">Phone</div>
+                <div class="text-muted small">+91 9418032730</div>
+              </div>
+            </div>
+
+            <div class="contact-line">
+              <i class="bi bi-envelope"></i>
+              <div>
+                <div class="fw-semibold">Email</div>
+                <div class="text-muted small">angelsplanetps@gmail.com</div>
+              </div>
+            </div>
+
+            <div class="contact-line">
+              <i class="bi bi-geo-alt"></i>
+              <div>
+                <div class="fw-semibold">Address</div>
+                <div class="text-muted small">Jahu,Hamirpur.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7 reveal">
+          <div class="contact-form-card">
+            <h5 class="mb-3">Send a Message</h5>
+            <form id="contactForm" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="fullName" placeholder="Your name" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Message</label>
+                  <textarea class="form-control" id="message" rows="4" placeholder="Write your message..." required></textarea>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-dark w-100" type="submit">
+                    Submit Message
+                  </button>
+                  <p id="contactMsg" class="small mt-3 mb-0 text-muted"></p>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="map-box mt-3">
+            <div class="map-placeholder">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3398.1284949521773!2d76.70748357404096!3d31.60293867417631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390527319dc4bd33%3A0x1054abb470b758cb!2sAngels%20Planet%20Public%20School!5e0!3m2!1sen!2sin!4v1769169561977!5m2!1sen!2sin" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-4">
+    <div class="container">
+      <div class="row g-3 align-items-center">
+        <div class="col-md-6">
+          <div class="fw-semibold">Angels Planet Public School</div>
+          <div class="small text-muted">Nurturing young minds with care, values, and joyful learning.</div>
+        </div>
+        <div class="col-md-6 text-md-end small">
+          <a class="footer-link" href="#about">About</a>
+          <a class="footer-link" href="#programs">Programs</a>
+          <a class="footer-link" href="#admissions">Admissions</a>
+          <a class="footer-link" href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <hr class="my-3 opacity-25"/>
+
+      <div class="d-flex justify-content-between small text-muted">
+        <div>© <span id="year"></span> Angels Planet Public School</div>
+        <div>Made with Bootstrap • Lightweight</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a class="whatsapp-float" target="_blank"
+     href="https://wa.me/919999999999?text=Hello%20Angels%20Planet%20Public%20School%2C%20I%20want%20to%20enquire%20about%20admissions.">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Gallery Modal -->
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-glass">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="galleryTitle">Gallery</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-image-placeholder">
+            Replace placeholder with real image
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Back to top button
+    const backToTopBtn = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 500) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Navbar active link highlighting on scroll
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = ["home","about","programs","admissions","gallery","contact"]
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
+
+    function setActiveLink() {
+      let currentId = "home";
+
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 120 && rect.bottom >= 120) {
+          currentId = section.id;
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${currentId}`) {
+          link.classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", setActiveLink);
+    setActiveLink();
+
+    // Reveal on scroll (lightweight)
+    const revealEls = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+      });
+    }, { threshold: 0.15 });
+
+    revealEls.forEach(el => observer.observe(el));
+
+    // Admissions form (demo validation)
+    const enquiryForm = document.getElementById("enquiryForm");
+    const formMsg = document.getElementById("formMsg");
+
+    enquiryForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const parentName = document.getElementById("parentName").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const classInterested = document.getElementById("classInterested").value;
+
+      if (!parentName || !phone || !classInterested) {
+        formMsg.textContent = "Please fill all fields before submitting.";
+        return;
+      }
+
+      formMsg.textContent = "Thank you! Your enquiry has been recorded (demo).";
+      enquiryForm.reset();
+    });
+
+    // Contact form (demo validation)
+    const contactForm = document.getElementById("contactForm");
+    const contactMsg = document.getElementById("contactMsg");
+
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const fullName = document.getElementById("fullName").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (!fullName || !email || !message) {
+        contactMsg.textContent = "Please fill all fields before submitting.";
+        return;
+      }
+
+      contactMsg.textContent = "Message submitted successfully (demo). We will contact you soon.";
+      contactForm.reset();
+    });
+
+    // Gallery Modal title (lightweight)
+    const galleryItems = document.querySelectorAll(".gallery-item");
+    const galleryTitle = document.getElementById("galleryTitle");
+    const galleryModal = new bootstrap.Modal(document.getElementById("galleryModal"));
+
+    galleryItems.forEach(item => {
+      item.addEventListener("click", () => {
+        galleryTitle.textContent = item.getAttribute("data-title") || "Gallery";
+        galleryModal.show();
+      });
+    });
+  </script>
+</body>
+</html>
