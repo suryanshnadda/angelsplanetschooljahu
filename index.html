@@ -475,7 +475,7 @@
   </div>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg sticky-top navbar-blur">
+  <nav class="navbar navbar-expand-lg  navbar-blur">
     <div class="container">
       <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#home">
         <span class="brand-mark"><img src="images/logo.jpeg" class="img-fluid" alt="My Image"></span>
@@ -492,6 +492,7 @@
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
           <li class="nav-item"><a class="nav-link" href="#admissions">Admissions</a></li>
+            <li class="nav-item"><a class="nav-link" href="#holiday">Holiday</a></li>
           <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -802,38 +803,45 @@
           </a>
         </div>
 
-        <div class="col-lg-6 reveal">
+        <div class="col-lg-6 reveal"> <section id="holiday" class="py-5">
           <div class="admission-card">
-            <h5 class="mb-3">Quick Enquiry</h5>
-            <form id="enquiryForm" novalidate>
-              <div class="mb-3">
-                <label class="form-label">Parent Name</label>
-                <input type="text" class="form-control" id="parentName" placeholder="Enter your name" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" placeholder="+91 XXXXX XXXXX" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Class Interested</label>
-                <select class="form-select" id="classInterested" required>
-                  <option value="">Select</option>
-                  <option>Pre-Nursery</option>
-                  <option>Nursery</option>
-                  <option>LKG</option>
-                  <option>UKG</option>
-                  <option>Grade 1</option>
-                  <option>Grade 2</option>
-                  <option>Grade 3</option>
-                  <option>Grade 4</option>
-                  <option>Grade 5</option>
-                </select>
-              </div>
-              <button type="submit" class="btn btn-dark w-100">
-                Submit Enquiry
-              </button>
-              <p id="formMsg" class="small mt-3 mb-0 text-muted"></p>
-            </form>
+            <h5 class="mb-3">Holiday Details</h5>
+           
+           
+            <div class="table-responsive">
+    <table class="table table-bordered table-hover text-center align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th>Date</th>
+          <th>Reason</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Row 1 Data 1</td>
+          <td>Row 1 Data 2</td>
+        </tr>
+        <tr>
+          <td>Row 2 Data 1</td>
+          <td>Row 2 Data 2</td>
+        </tr>
+        <tr>
+          <td>Row 3 Data 1</td>
+          <td>Row 3 Data 2</td>
+        </tr>
+        <tr>
+          <td>Row 4 Data 1</td>
+          <td>Row 4 Data 2</td>
+        </tr>
+        <tr>
+          <td>Row 5 Data 1</td>
+          <td>Row 5 Data 2</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+             </section>    
           </div>
         </div>
       </div>
@@ -1089,6 +1097,8 @@
       }
     });
 
+    
+
     backToTopBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
@@ -1182,6 +1192,10 @@
         galleryModal.show();
       });
     });
+	
+	
+	
+	
   </script>
 </body>
 </html>
